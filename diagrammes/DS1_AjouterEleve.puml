@@ -1,0 +1,43 @@
+@startuml
+title Diagramme de Séquence — Ajouter un élève
+
+actor Admin
+participant Main
+participant Admin as AdminObj
+participant Eleve
+
+Admin -> Main : choisir option 1 (Gestion Élèves)
+Main --> Admin : afficher menu élèves
+
+Admin -> Main : choisir option 1 (Afficher élèves)
+Main -> AdminObj : afficherEleves()
+
+alt Liste vide
+    AdminObj --> Main : "Aucun élève enregistré"
+    Main --> Admin : afficher message
+else Liste non vide
+    loop pour chaque élève
+        AdminObj -> Eleve : afficherDetails()
+        Eleve --> AdminObj : détails élève
+    end
+    AdminObj --> Main : liste affichée
+    Main --> Admin : afficher liste
+end
+
+Admin -> Main : choisir option 3 (Modifier statut)
+Main --> Admin : demander ID élève
+Admin -> Main : saisir ID = 3
+Main -> AdminObj : rechercherEleve(3)
+
+opt Élève trouvé
+    AdminObj --> Main : retourner élève
+    Main --> Admin : demander nouveau statut
+    Admin -> Main : saisir "absent"
+    Main -> AdminObj : modifierStatutEleve(3, "absent")
+    AdminObj -> Eleve : modifierStatut("absent")
+    Eleve --> AdminObj : statut modifié
+    AdminObj --> Main : confirmation
+    Main --> Admin : afficher "Statut modifié ✅"
+end
+
+@enduml

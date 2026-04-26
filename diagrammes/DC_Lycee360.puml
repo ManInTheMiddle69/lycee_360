@@ -1,0 +1,104 @@
+@startuml
+title Diagramme de Classes — Lycee360
+
+class Personne {
+    - id : int
+    - nom : String
+    - prenom : String
+    - age : int
+    + Personne()
+    + Personne(id, nom, prenom, age)
+    + afficherDetails() : void
+    + getId() : int
+    + getNom() : String
+    + getPrenom() : String
+    + getAge() : int
+    + setId(id) : void
+    + setNom(nom) : void
+    + setPrenom(prenom) : void
+    + setAge(age) : void
+}
+
+class Eleve {
+    - classe : String
+    - statut : String
+    + Eleve()
+    + Eleve(id, nom, prenom, age, classe, statut)
+    + modifierStatut(statut) : void
+    + afficherDetails() : void
+    + getClasse() : String
+    + getStatut() : String
+    + setClasse(classe) : void
+    + setStatut(statut) : void
+}
+
+class Enseignant {
+    - matiere : String
+    - email : String
+    + Enseignant()
+    + Enseignant(id, nom, prenom, age, matiere, email)
+    + afficherDetails() : void
+    + getMatiere() : String
+    + getEmail() : String
+    + setMatiere(matiere) : void
+    + setEmail(email) : void
+}
+
+class Classe {
+    - id : int
+    - nom : String
+    - niveau : String
+    + Classe()
+    + Classe(id, nom, niveau)
+    + ajouterEleve(eleve) : void
+    + afficherEleves() : void
+    + afficherDetails() : void
+    + getId() : int
+    + getNom() : String
+    + getNiveau() : String
+    + setEnseignant(enseignant) : void
+}
+
+class Absence {
+    - id : int
+    - date : String
+    - justifiee : boolean
+    - motif : String
+    + Absence()
+    + Absence(id, eleve, date, justifiee, motif)
+    + enregistrer() : void
+    + afficherDetails() : void
+    + getId() : int
+    + getDate() : String
+    + isJustifiee() : boolean
+    + getMotif() : String
+}
+
+class Admin {
+    + Admin(id, nom, prenom, age)
+    + ajouterEleve(eleve) : void
+    + afficherEleves() : void
+    + rechercherEleve(id) : Eleve
+    + modifierStatutEleve(id, statut) : void
+    + ajouterEnseignant(enseignant) : void
+    + afficherEnseignants() : void
+    + ajouterClasse(classe) : void
+    + afficherClasses() : void
+    + ajouterAbsence(absence) : void
+    + afficherAbsences() : void
+    + afficherTableauDeBord() : void
+}
+
+' Relations
+Personne <|-- Eleve : hérite
+Personne <|-- Enseignant : hérite
+Personne <|-- Admin : hérite
+Classe "1" o-- "0..*" Eleve : contient
+Classe "1" --> "1" Enseignant : gère
+Eleve "1" *-- "0..*" Absence : possède
+Admin "1" --> "0..*" Eleve : gère
+Admin "1" --> "0..*" Enseignant : gère
+Admin "1" --> "0..*" Classe : gère
+Admin "1" --> "0..*" Absence : gère
+
+@enduml

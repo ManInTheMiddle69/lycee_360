@@ -1,0 +1,49 @@
+@startuml
+title Diagramme de Cas d'Utilisation — Lycee360
+
+actor Visiteur
+actor Admin
+actor Enseignant
+actor Eleve
+
+rectangle Lycee360 {
+
+    ' Visiteur
+    Visiteur --> (Consulter informations lycée)
+
+    ' Eleve
+    Eleve --> (Consulter son bulletin)
+    Eleve --> (Consulter ses absences)
+    Eleve --> (Consulter son emploi du temps)
+
+    ' Enseignant
+    Enseignant --> (Consulter sa classe)
+    Enseignant --> (Saisir les absences)
+    Enseignant --> (Consulter les élèves)
+
+    ' Admin
+    Admin --> (Ajouter un élève)
+    Admin --> (Modifier statut élève)
+    Admin --> (Supprimer un élève)
+    Admin --> (Ajouter un enseignant)
+    Admin --> (Consulter les enseignants)
+    Admin --> (Gérer les classes)
+    Admin --> (Gérer les absences)
+    Admin --> (Voir tableau de bord)
+
+    ' Relations include
+    (Ajouter un élève) .> (Vérifier données élève) : <<include>>
+    (Modifier statut élève) .> (Rechercher élève) : <<include>>
+    (Saisir les absences) .> (Vérifier élève existant) : <<include>>
+
+    ' Relations extend
+    (Modifier statut élève) .> (Notifier enseignant) : <<extend>>
+    (Gérer les absences) .> (Générer alerte) : <<extend>>
+}
+
+' Héritage acteurs
+Visiteur <|-- Eleve
+Visiteur <|-- Enseignant
+Visiteur <|-- Admin
+
+@enduml

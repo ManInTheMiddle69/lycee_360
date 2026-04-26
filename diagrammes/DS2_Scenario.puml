@@ -1,0 +1,47 @@
+@startuml
+title Diagramme de Séquence Complexe — Absence et Tableau de Bord
+
+actor Admin
+participant Main
+participant Admin as AdminObj
+participant Absence
+participant Eleve
+participant Classe
+
+Admin -> Main : choisir option 4 (Absences)
+Main --> Admin : afficher menu absences
+
+Admin -> Main : choisir option 1 (Afficher absences)
+Main -> AdminObj : afficherAbsences()
+
+loop pour chaque absence
+    AdminObj -> Absence : afficherDetails()
+    Absence -> Eleve : getNom()
+    Eleve --> Absence : nom élève
+    Absence --> AdminObj : détails absence
+end
+
+AdminObj --> Main : liste absences
+Main --> Admin : afficher liste
+
+Admin -> Main : retour menu principal
+Admin -> Main : choisir option 5 (Tableau de bord)
+Main -> AdminObj : afficherTableauDeBord()
+
+loop pour chaque élève
+    AdminObj -> Eleve : getStatut()
+    Eleve --> AdminObj : statut
+
+    alt statut = "present"
+        AdminObj -> AdminObj : nbPresents++
+    else statut = "absent"
+        AdminObj -> AdminObj : nbAbsents++
+    else statut = "exclu"
+        AdminObj -> AdminObj : nbExclus++
+    end
+end
+
+AdminObj --> Main : statistiques complètes
+Main --> Admin : afficher tableau de bord
+
+@enduml
