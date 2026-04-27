@@ -5,7 +5,7 @@ Lycee360 est un système de gestion de lycée qui permet
  à l'administration de gérer les élèves, les enseignants,  
    
  les classes et les absences via une interface console. 
- 
+
 **Membres de l'équipe**  
 | | | | |  
 |-|-|-|-|  
@@ -15,10 +15,11 @@ Lycee360 est un système de gestion de lycée qui permet
 | rayen   | Dev      | Gestion classes + Absences | feature/gestion-classes |   
 | yassine | PO+Dev+SM| Tableau de bord Admin | feature/admin-dashboard |   
    
+
 **Fonctionnalités**  
-- Gestion des élèves (ajout, affichage, statut)  
-- Gestion des enseignants (ajout, recherche)  
-- Gestion des classes (création, affectation)  
+- Gestion des élèves (affichage, statut)  
+- Gestion des enseignants (affiche, recherche)  
+- Gestion des classes (afficher, affectation)  
 - Gestion des absences (enregistrement, affichage)  
 - Tableau de bord Admin (statistiques)  
 
