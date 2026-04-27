@@ -9,8 +9,8 @@ Lycee360 est un système de gestion de lycée qui permet
 | | | | |  
 |-|-|-|-|  
 | **Membre** | **Rôle** | **Fonctionnalité** | **Branche** |   
-| [Nom 1] | PO + Dev | Gestion des élèves | feature/gestion-eleves |   
-| [Nom 2] | SM + Dev | Gestion des enseignants | feature/gestion-enseignants |   
+| maram | PO + Dev | Gestion des élèves | feature/gestion-eleves |   
+|  | SM + Dev | Gestion des enseignants | feature/gestion-enseignants |   
 | [Nom 3] | Dev | Gestion classes + Absences | feature/gestion-classes |   
 | [Nom 4] | Dev | Tableau de bord Admin | feature/admin-dashboard |   
    
