@@ -139,14 +139,14 @@ public class Admin extends Personne {
         System.out.println("\n╔══════════════════════════════════╗");
         System.out.println("║       TABLEAU DE BORD ADMIN      ║");
         System.out.println("╠══════════════════════════════════╣");
-        System.out.println("║  Élèves inscrits  : " + eleves.size() + "           ║");
-        System.out.println("║  Enseignants      : " + enseignants.size() + "           ║");
-        System.out.println("║  Classes          : " + classes.size() + "           ║");
-        System.out.println("║  Absences totales : " + absences.size() + "           ║");
+        System.out.println("║  Élèves inscrits  :  " + eleves.size() + "           ║");
+        System.out.println("║  Enseignants      :  " + enseignants.size() + "           ║");
+        System.out.println("║  Classes          :  " + classes.size() + "           ║");
+        System.out.println("║  Absences totales :  " + absences.size() + "           ║");
         System.out.println("╠══════════════════════════════════╣");
-        System.out.println("║  Présents  : " + nbPresents + "                  ║");
-        System.out.println("║  Absents   : " + nbAbsents + "                  ║");
-        System.out.println("║  Exclus    : " + nbExclus + "                  ║");
+        System.out.println("║  Présents  :  " + nbPresents + "                  ║");
+        System.out.println("║  Absents   :  " + nbAbsents + "                  ║");
+        System.out.println("║  Exclus    :  " + nbExclus + "                  ║");
         System.out.println("╚══════════════════════════════════╝");
     }
 

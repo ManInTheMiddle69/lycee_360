@@ -1,5 +1,4 @@
 package com.lycee360.models;
-
 import java.util.Scanner;
 
 public class Main {
@@ -37,7 +36,7 @@ public class Main {
                     System.out.println("\nAu revoir ! 👋");
                     break;
                 default:
-                    System.out.println("\n❌ Choix invalide !");
+                    System.out.println("\n❌ Choix invalide !!!");
             }
         }
     }
@@ -92,7 +91,7 @@ public class Main {
         System.out.println("║  5. Tableau de bord Admin        ║");
         System.out.println("║  0. Quitter                      ║");
         System.out.println("╚══════════════════════════════════╝");
-        System.out.print("Votre choix : ");
+        System.out.print("Votre choix: ");
     }
 
     // ==========================================
@@ -117,7 +116,7 @@ public class Main {
                     admin.afficherEleves();
                     break;
                 case 2:
-                    System.out.print("ID de l'élève : ");
+                    System.out.print("ID de l'élève: ");
                     int id = scanner.nextInt();
                     Eleve e = admin.rechercherEleve(id);
                     if (e != null) e.afficherDetails();
@@ -133,7 +132,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("❌ Choix invalide !");
+                    System.out.println("❌ Choix invalide !!! ");
             }
         }
     }
@@ -167,7 +166,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("❌ Choix invalide !");
+                    System.out.println("❌ Choix invalide !!! ");
             }
         }
     }
@@ -194,7 +193,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("❌ Choix invalide !");
+                    System.out.println("❌ Choix invalide!!! ");
             }
         }
     }
@@ -211,7 +210,7 @@ public class Main {
             System.out.println("║  1. Afficher toutes les absences ║");
             System.out.println("║  0. Retour                       ║");
             System.out.println("╚══════════════════════════════════╝");
-            System.out.print("Votre choix : ");
+            System.out.print("Votre choix: ");
             choix = scanner.nextInt();
 
             switch (choix) {
@@ -221,7 +220,7 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.println("❌ Choix invalide !");
+                    System.out.println("❌ Choix invalide!!! ");
             }
         }
     }
