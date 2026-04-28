@@ -24,9 +24,9 @@ public class Absence {
     // Méthodes métier
     public void enregistrer() {
         System.out.println("Absence enregistrée !");
-        System.out.println("Élève  : " + eleve.getNom() + " " + eleve.getPrenom());
-        System.out.println("Date   : " + date);
-        System.out.println("Motif  : " + motif);
+        System.out.println("Élève : " + eleve.getNom() + " " + eleve.getPrenom());
+        System.out.println("Date  : " + date);
+        System.out.println("Motif : " + motif);
         if (justifiee) {
             System.out.println("Statut : Justifiée ✅");
         } else {
@@ -36,13 +36,13 @@ public class Absence {
     }
 
     public void afficherDetails() {
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
         System.out.println("ID Absence : " + id);
         System.out.println("Élève      : " + eleve.getNom() + " " + eleve.getPrenom());
         System.out.println("Date       : " + date);
         System.out.println("Justifiée  : " + (justifiee ? "Oui" : "Non"));
         System.out.println("Motif      : " + motif);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
     }
 
     // Getters
