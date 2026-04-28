@@ -18,11 +18,11 @@ public class Enseignant extends Personne {
 
     // Méthodes métier
     public void afficherDetails() {
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
         super.afficherDetails();
         System.out.println("Matière : " + matiere);
         System.out.println("Email   : " + email);
-        System.out.println("---------------------------");
+        System.out.println("--------------------------");
     }
 
     // Getters
