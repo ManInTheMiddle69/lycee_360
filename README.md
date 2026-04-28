@@ -37,3 +37,4 @@ https://www.figma.com/site/mB1EZGzlbgVWp2FXzdeS4L/Lycee360?node-id=0-1&t=HsxvUFA
 cd src  
  javac -encoding UTF-8 com/lycee360/models/*.java  
  java com.lycee360.models.Main  
+  

@@ -2,9 +2,9 @@ package com.lycee360.models;
 
 public class Eleve extends Personne {
 
-    // Champs privés
+    //Champs privés
     private String classe;
-    private String statut; // present, absent, exclu
+    private String statut; //present, absent, exclu
 
     // Constructeur vide
     public Eleve() {}
@@ -23,11 +23,11 @@ public class Eleve extends Personne {
     }
 
     public void afficherDetails() {
-        System.out.println("---------------------------");
+        System.out.println("_--------------------------_");
         super.afficherDetails();
         System.out.println("Classe : " + classe);
         System.out.println("Statut : " + statut);
-        System.out.println("---------------------------");
+        System.out.println("_--------------------------_");
     }
 
     // Getters
